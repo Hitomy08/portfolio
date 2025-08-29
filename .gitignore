@@ -1,0 +1,22 @@
+# ==========================
+# OS / Editor
+# ==========================
+.DS_Store
+Thumbs.db
+.vscode/
+
+# ==========================
+# Build / Logs
+# ==========================
+node_modules/
+dist/
+*.log
+
+# ==========================
+# WordPress / PHP
+# ==========================
+wp/wp-config.php
+wp/wp-content/uploads/
+wp/wp-content/cache/
+wp/wp-content/debug.log
+.env
