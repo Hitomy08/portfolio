@@ -19,4 +19,11 @@ wp/wp-config.php
 wp/wp-content/uploads/
 wp/wp-content/cache/
 wp/wp-content/debug.log
+wp/wp-content/plugins/ultimate-addons-for-gutenberg/dist/
+
 .env
+
+# ==========================
+# PHP Composer（将来用）
+# ==========================
+/vendor/
