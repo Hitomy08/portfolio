@@ -1,0 +1,73 @@
+.l-header {
+  height: 3.5rem;
+  background-color: #ea0000;
+}
+
+.l-header__nav {
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 3.5rem;
+}
+
+.l-header__nav a {
+  margin-left: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.l-main {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.l-article {
+  box-sizing: border-box;
+  min-height: calc(100vh - 7rem);
+  padding: 1.75rem 0 3.5rem;
+  margin: 0 auto;
+}
+
+.l-article h1 a,
+.l-article h1 a:visited {
+  text-decoration: none;
+  color: #222;
+}
+
+.l-footer {
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+  /* height: 3.5rem;
+  background-color: #fafafa; */
+
+}
+
+/* aタグをブロック化して全体をクリック範囲にする */
+.l-footer-link {
+  display: flex;
+  /* 中央寄せ用 */
+  align-items: center;
+  /* 縦中央 */
+  justify-content: center;
+  /* 横中央 */
+  width: 100%;
+  height: 100%;
+  /* フッタ全体をクリック範囲に */
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* マウスオーバー時に軽く変化を付ける */
+.footer-link:hover {
+  background-color: #444;
+}
+
+.l-footer__copyright {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 3.5rem;
+  color: #555;
+  text-align: center;
+}

@@ -1,0 +1,1234 @@
+@charset "UTF-8";
+
+/* ========== 基本（ベース） ========== */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #333;
+  font-family: 'Noto Sans JP', 'YuGothic', 'Yu Gothic', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color .3s ease, background-color .3s ease;
+}
+
+
+/* キーボード操作時のフォーカス可視化 */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
+/* 固定ヘッダー分のスクロール位置補正 */
+.u-scroll-anchor {
+  scroll-margin-top: 110px;
+}
+
+/* すこし強調 */
+.u-strong {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ドットなしの行（学歴など） */
+.u-no-dot.c-timeline__main::before {
+  content: "";
+}
+
+.u-no-dot.c-timeline__main {
+  padding-left: 1em;
+}
+
+/* ========== レイアウト ========== */
+.l-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 80px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 0 40px;
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
+}
+
+.l-header__title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.l-main {
+  margin-top: 80px;
+}
+
+.l-wrapper {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto 40px;
+}
+
+.l-footer {
+  padding: 30px;
+}
+
+.l-footer__copy {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ========== コンポーネント ========== */
+/* サイトタイトルとサブタイトル */
+.c-site-title {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: .14em;
+}
+
+.c-site-title a {
+  display: block;
+}
+
+.c-site-title a:hover {
+  opacity: .7;
+}
+
+.c-site-subtitle {
+  font-size: 11px;
+  letter-spacing: .2em;
+  line-height: 1.2;
+  margin: 8px 24px 0 0;
+}
+
+/* グローバルナビ */
+.c-global-nav__menu {
+  display: flex;
+  align-items: center;
+}
+
+.c-global-nav__menu a {
+  white-space: nowrap;
+}
+
+.c-global-nav__menu li {
+  font-size: 14px;
+  letter-spacing: .05em;
+  margin-left: 40px;
+  list-style: none;
+}
+
+/* ホバー時の下線アニメーション */
+.c-link-underline {
+  position: relative;
+}
+
+.c-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .5s;
+}
+
+/* ホバーとフォーカスで下線を表示 */
+.c-link-underline:hover::after,
+.c-link-underline:focus-visible::after {
+  transform: scale(1, 1);
+}
+
+/* ハンバーガーボタン */
+.c-hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  border: none;
+}
+
+.c-hamburger__bar {
+  width: 30px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  left: 5px;
+  transition: all .4s;
+}
+
+.c-hamburger__bar:first-child {
+  top: 12px;
+}
+
+.c-hamburger__bar:last-child {
+  top: 24px;
+}
+
+.c-hamburger.is-active .c-hamburger__bar:first-child {
+  top: 18px;
+  transform: rotate(-30deg);
+}
+
+.c-hamburger.is-active .c-hamburger__bar:last-child {
+  top: 18px;
+  transform: rotate(30deg);
+}
+
+/* デスクトップ時は特にスタイル指定なし。
+   モバイル時の .is-active で切り替え */
+.c-global-nav {
+  /* デスクトップ時の初期状態 */
+}
+
+.c-global-nav.is-active {
+  /* モバイル時の表示切替（@media内で具体化） */
+}
+
+/* セクション見出し */
+.c-section-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding-top: 40px;
+  margin-bottom: 60px;
+}
+
+.c-section-title__en {
+  display: block;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+}
+
+.c-section-title__and {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+}
+
+.c-section-title__ja {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.c-section-subtitle {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin: 0 0 42px;
+  position: relative;
+}
+
+.c-section-subtitle::before {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  top: 20px;
+  right: -100px;
+}
+
+/* ボタン */
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color .4s, color .4s;
+}
+
+.c-btn--round {
+  width: min(90%, 460px);
+  padding: 0 24px;
+  height: 68px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  letter-spacing: .15em;
+}
+
+
+/* カード */
+.c-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-card {
+  flex: 0 0 calc(33.333% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  padding: 5px;
+  color: #333;
+  list-style: none;
+}
+
+/* 差分：通常カードのみ初期グレー */
+.c-card__media img {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  filter: grayscale(100%);
+  transition: filter .3s ease-out, transform .3s ease-out;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+/* ui・機能デモは最初からカラー表示 */
+.c-card__media--demos img {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  transition: filter .3s ease-out, transform .3s ease-out;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.c-card__media img:hover {
+  filter: grayscale(0);
+  transform: scale(1.08);
+}
+
+.c-card__media--demos img:hover {
+  opacity: .7;
+  transform: scale(1.08);
+}
+
+
+.c-card__title {
+  margin-top: 14px;
+  padding-left: 4px;
+  font-size: 1em;
+  letter-spacing: .075em;
+  font-weight: 500;
+}
+
+.c-card__meta {
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 5px;
+  letter-spacing: .1em;
+}
+
+
+.c-list-item {
+  display: block;
+  margin-bottom: 1.4em;
+  position: relative;
+}
+
+/* 1行目は幅いっぱいを基準にする */
+.c-list-main {
+  display: block;
+  width: 100%;
+}
+
+/* 補足は必ず次の行で右寄せ */
+.c-subcatch {
+  display: block;
+  margin: .75em 0.5em;
+  font-size: .85em;
+  line-height: 1.2;
+  letter-spacing: .08em;
+  color: #666;
+}
+
+/* ページトップボタン */
+.c-page-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 88px;
+  text-decoration: none;
+  opacity: 0;
+  transform: scale(.8);
+  pointer-events: none;
+  transition: opacity .4s, transform .4s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+  z-index: 50;
+}
+
+.c-page-top.is-show {
+  opacity: .6;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.c-page-top:hover {
+  background: #141414;
+  opacity: 1;
+}
+
+/* ========== プロジェクト固有スタイル ========== */
+/* スキルスライダー */
+.p-skills__slider .slider .slider-item {
+  padding: 0 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.p-skills__slider .slider .slider-item .img img {
+  width: 70%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.p-skills__slider .slider .slider-item .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  letter-spacing: .05em;
+}
+
+.p-skills__slider .slider .slider-item .text {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+/* ABOUT：プロフィール ===========================================*/
+.p-about__profile {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  /* ブロック間は32px */
+  margin-bottom: 40px;
+  /* プロフィール全体の下余白 */
+}
+
+.p-about__photo {
+  width: 20%;
+  text-align: center;
+}
+
+.p-about__photo img {
+  width: 90%;
+  max-width: 180px;
+  border-radius: 5%;
+  height: auto;
+}
+
+.p-about__text {
+  width: 64%;
+  margin-right: 8%;
+}
+
+/* 名前・リード */
+.p-about__name-en {
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-bottom: 8px;
+}
+
+.p-about__name-ja {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.p-about__lead {
+  line-height: 2.2;
+  letter-spacing: .13em;
+  margin: 0 0 40px;
+  max-width: 45rem;
+}
+
+/* 箇条書き（行型） */
+.p-about__list-line {
+  margin: 0 0 8px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.p-about__list-line li {
+  position: relative;
+  margin: 0 0 48px;
+  padding-left: 0;
+}
+
+/* ラベル（上段） */
+.p-about__list-line .c-title {
+  display: block;
+  border-left: 2px solid #FE8A63;
+  padding-left: 10px;
+  font-size: 0.88em;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* 本文（下段） */
+.p-about__detail {
+  display: block;
+  line-height: 2.2;
+  letter-spacing: .09em;
+  margin: 0;
+  padding: 0 16px 0 12px;
+  overflow-wrap: break-word;
+  max-width: 45rem;
+}
+
+/* 点リスト（黒ポチ風） */
+.p-about__list-disc {
+  padding: 0;
+  list-style: none;
+}
+
+.p-about__list-decimal li {
+  padding-left: .4em;
+}
+
+.p-about__list-disc li {
+  position: relative;
+  padding-left: 1.2em;
+  letter-spacing: .1em;
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
+
+.p-about__list-disc li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: .9em;
+}
+
+/* 番号リスト */
+.p-about__list-decimal {
+  list-style: decimal;
+  margin: 8px 0 0 1.4em;
+}
+
+.p-about__list-decimal li {
+  margin-bottom: 40px;
+}
+
+.p-about__list-decimal>li>.p-about__list-disc {
+  margin-top: 2em;
+}
+
+.p-about__detail>.p-about__list-disc {
+  margin-top: 2em;
+}
+
+/* 「もっと見る」 */
+.p-about__more {
+  margin: 24px 0;
+  /* セクション内でのまとまった余白 */
+  border-top: 1px dashed #ccc;
+  padding-top: 16px;
+}
+
+.p-about__more-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  padding: 16px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: .09em;
+  user-select: none;
+  text-align: center;
+}
+
+.p-about__more .icon-arrow {
+  transition: transform .25s ease;
+}
+
+.p-about__more[open] .icon-arrow {
+  transform: rotate(180deg);
+}
+
+.p-about__more[open] .p-about__list-line {
+  margin-top: 24px;
+  padding: 0 24px;
+}
+
+/* このセクション内の強調は少し軽めに */
+.p-about__text .u-strong {
+  font-weight: 500;
+}
+
+/* タイムライン */
+.c-timeline {
+  position: relative;
+  margin: 0 0 100px 40px;
+  padding-left: 40px;
+  border-left: 1px solid #ccc;
+}
+
+.c-timeline__item {
+  display: flex;
+  padding: 32px 0;
+  align-items: flex-start;
+  position: relative;
+}
+
+.c-timeline__year {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: .1em;
+  font-weight: 700;
+  position: relative;
+}
+
+.c-timeline__dot {
+  width: 8px;
+  height: 8px;
+  background: #a0a0a0;
+  border-radius: 50%;
+  position: absolute;
+  left: -44px;
+  top: 10px;
+}
+
+.c-timeline__text {
+  font-size: 1em;
+}
+
+.c-timeline__tasks {
+  width: 75%;
+  margin: 0;
+  padding: 0;
+}
+
+.c-timeline__tasks li {
+  margin-bottom: 1.8em;
+  list-style: none;
+}
+
+.c-timeline__main {
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  padding-left: 2em;
+  position: relative;
+}
+
+.c-timeline__main::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.c-timeline__sub {
+  display: block;
+  margin-left: 2.5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  letter-spacing: .1em;
+  padding-left: 1.4em;
+  position: relative;
+}
+
+.c-timeline__sub::before {
+  content: "┗ ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #666;
+}
+
+/* VISION（三つの軸）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.p-vision__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  /* gap: 8px; */
+  margin-top: 8px;
+}
+
+.word {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.word-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.word>.label {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .25em;
+  white-space: nowrap;
+  font-size: 1.4em;
+  line-height: 1.4;
+  margin: 0 0 14px;
+  position: relative;
+}
+
+.word .kanji {
+  font-size: 1.5em;
+  color: #FE8A63;
+  line-height: 1;
+}
+
+.word .kana {
+  font-size: .6em;
+  margin-left: 2px;
+  line-height: 1;
+}
+
+.word-desc {
+  position: relative;
+  z-index: 1;
+  color: #666;
+  text-align: left;
+  line-height: 1.9;
+  max-width: 28ch;
+  font-size: 1em;
+  padding: 12px 0 0;
+  overflow-wrap: break-word;
+}
+
+/* 仕切り用の×アイコン */
+/* 「３つの軸」 */
+.icon-wrapper {
+  display: grid;
+  place-items: center;
+  margin: 12px 0;
+}
+
+.icon-x {
+  width: 40px;
+  height: auto;
+  fill: none;
+  stroke: #a0a0a0;
+}
+
+.icon-line {
+  stroke-width: .8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* フェードインのアニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp .8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: .3s;
+}
+
+.delay-2 {
+  animation-delay: .6s;
+}
+
+.delay-3 {
+  animation-delay: .9s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* 採用メリット */
+.closing-benefit {
+  margin: 64px auto 0;
+  padding: 0 4% 96px;
+}
+
+.closing-benefit p {
+  font-size: 1.8em;
+  line-height: 1.9;
+  letter-spacing: .1em;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  font-kerning: normal;
+  /* 文字同士の自動カーニングを有効化 */
+  font-feature-settings: "palt" 1;
+  /* Proportional Alternate：句読点などの横幅・余白調整 */
+  font-variant-east-asian: proportional-width;
+  /* 東アジア文字をプロポーショナル幅に */
+}
+
+
+/* CONTACT セクション */
+.p-contact {
+  padding: 56px 40px 88px;
+  background: #333;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.p-contact .c-section-title {
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.p-contact .c-btn img {
+  width: 14px;
+  margin-left: 10px;
+  flex: 0 0 14px;
+}
+
+.p-contact:hover .c-btn {
+  background: #fff;
+  color: #333;
+}
+
+.p-contact__note {
+  font-size: 12px;
+  margin-top: 60px;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+/* ========================================================================= レスポンシブ対応  */
+/* 1024px 以下 */
+@media (max-width: 1024px) {
+
+  .c-site-title {
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: .2em;
+    margin-top: 1%;
+  }
+
+  .c-site-subtitle {
+    display: none;
+  }
+
+  .icon-wrapper {
+    display: block;
+    text-align: center;
+    margin: 14px 0;
+  }
+
+  .icon-x {
+    width: 32px;
+    height: 36px;
+  }
+
+  .p-contact .c-btn {
+    background: #fff;
+    color: #333;
+  }
+
+  .p-vision__main {
+    align-items: center;
+    gap: 0;
+  }
+
+  .word-desc {
+    font-size: .8rem;
+  }
+
+  .word>.label {
+    margin: 0 0 12px;
+    padding: 0;
+    text-align: center;
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===============================================767px 以下 */
+@media (max-width: 767px) {
+  .l-header {
+    height: 56px;
+    padding: 0 20px;
+  }
+
+  .l-main {
+    margin-top: 64px;
+  }
+
+  .l-wrapper {
+    padding: 0 24px;
+  }
+
+  /* ハンバーガー表示＋全画面のオーバーレイメニュー */
+  .c-hamburger {
+    display: block;
+    position: fixed;
+    top: 9px;
+    right: 20px;
+    z-index: 30;
+  }
+
+  /* デスクトップ初期状態は特に指定なし（モバイルは @media 内の .is-active で制御） */
+  .c-global-nav {
+    width: 100%;
+    height: 100vh;
+    background: #dfdfdf;
+    padding: 120px 40px;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s, visibility .6s;
+  }
+
+  .c-global-nav.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .c-global-nav__menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c-global-nav__menu li {
+    margin: 0 0 48px;
+  }
+
+  .c-section-title {
+    margin-bottom: 40px;
+  }
+
+  .c-section-title__en {
+    font-size: 1.56rem;
+  }
+
+  .c-section-title__ja {
+    margin-bottom: 6px;
+  }
+
+  .c-section-subtitle {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+
+  .c-section-subtitle::before {
+    width: 80px;
+    height: 1px;
+    top: 16px;
+  }
+
+  /* 自己紹介文の補足 */
+  .c-subcatch {
+    display: block;
+    margin: .2em 0 0 1.2em;
+    white-space: normal;
+    line-height: 1.8;
+  }
+
+  /* スライダー内要素の微調整 */
+  .p-skills__slider .slider .slider-item {
+    margin: 0 10px;
+  }
+
+  .p-skills__slider .slider .slider-item .title {
+    font-size: 18px;
+    margin: 20px 0 10px;
+  }
+
+  .p-skills__slider .slider .slider-item .text {
+    font-size: 14px;
+  }
+
+  /*ボタン */
+  .c-btn--round {
+    width: 80%;
+    height: 42px;
+    font-size: 12px;
+    letter-spacing: .05em;
+  }
+
+  /* WORKS：1カラム */
+  .c-card-grid {
+    gap: 20px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .c-card {
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+  }
+
+  .c-card__media img {
+    border: 1px solid #e6e6e6;
+    filter: grayscale(0);
+  }
+
+  .c-card__title {
+    margin-top: 6px;
+    font-size: 14px;
+    padding-left: 6px;
+  }
+
+  .c-card__meta {
+    margin-top: 4px;
+    padding-left: 6px;
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  /* 自己紹介文の補足 */
+  .c-list-item {
+    margin-bottom: .75em;
+  }
+
+  .c-list-wrapper {
+    margin-bottom: 2em;
+  }
+
+  /* ABOUT */
+  .p-about__profile {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 0;
+  }
+
+  .p-about__photo {
+    width: 90%;
+    margin: 0 auto 1.5em;
+  }
+
+  .p-about__photo img {
+    max-width: 50%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .p-about__text {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* 名前・リード */
+  .p-about__name-en {
+    text-align: center;
+  }
+
+  .p-about__name-ja {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /* 文字組と段落の間隔 */
+  .p-about__lead {
+    font-size: 0.85em;
+    margin-bottom: 24px;
+    line-height: 2;
+    letter-spacing: .1em;
+  }
+
+  .p-about__detail {
+    letter-spacing: .1em;
+    text-align: justify;
+    font-size: 0.85em;
+  }
+
+  .p-about__list-disc li {
+    margin-bottom: 1.5em;
+  }
+
+  /* サブリストの上余白 */
+  .p-about__list-decimal>li>.p-about__list-disc {
+    margin-top: 2em;
+  }
+
+  /* 「もっと見る」内の余白を少し詰める */
+  .p-about__more {
+    margin: 20px 0;
+    padding-top: 12px;
+  }
+
+  .p-about__more-summary {
+    padding: 14px;
+  }
+
+  .p-about__more[open] .p-about__list-line {
+    margin-top: 20px;
+    padding: 0 8px;
+  }
+
+
+
+  /* VISION：縦並びに切り替え */
+  .p-vision__main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .word {
+    margin-bottom: 0;
+    padding: 12px 4px;
+  }
+
+
+  .word .kanji {
+    font-size: 2rem;
+  }
+
+  .word-desc {
+    font-size: .95rem;
+  }
+
+  .icon-wrapper {
+    margin: 6px 0 10px;
+  }
+
+  .icon-x {
+    width: 36px;
+  }
+
+  /* タイムライン：縦流れ */
+  .c-timeline {
+    margin: 0 0 48px 20px;
+    padding-left: 24px;
+  }
+
+
+  .c-timeline__item {
+    flex-direction: column;
+    padding: 24px 0;
+  }
+
+  .c-timeline__year {
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 16px;
+  }
+
+  .c-timeline__dot {
+    left: -28px;
+  }
+
+  .c-timeline__tasks {
+    width: 100%;
+  }
+
+  .c-timeline__main {
+    font-size: .85em;
+    line-height: 1.4;
+    padding-left: 1.4em;
+  }
+
+  .c-timeline__sub {
+    font-size: .8em;
+    margin-left: 1.4em;
+    padding-top: 2px;
+    letter-spacing: normal;
+  }
+
+  /* 採用メリット */
+  .closing-benefit {
+    margin: 40px auto 0px;
+    padding: 0 4% 48px;
+  }
+
+  .closing-benefit p {
+    font-size: 1.3em;
+  }
+
+  /* CONTACT の余白・サイズ調整 */
+  .p-contact {
+    padding: 40px 20px 56px;
+  }
+
+  .p-contact .c-section-title {
+    font-size: 32px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+  }
+
+
+  .p-contact .c-btn img {
+    margin-left: 2px;
+    width: 11px;
+    flex: 0 0 11px;
+  }
+
+  .p-contact__note {
+    font-size: 11px;
+    margin-top: 20px;
+  }
+
+  /* ページトップボタン */
+  .c-page-top {
+    background: #333;
+    color: #fff;
+    bottom: 16px;
+    right: 16px;
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    line-height: 80px;
+  }
+}

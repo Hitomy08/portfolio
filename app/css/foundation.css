@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  color: #1f1f1f;
+  font-family: 'Noto Sans JP', 'YuGothic', 'Yu Gothic', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1.75rem;
+  letter-spacing: .1em;
+}
+
+a {
+  color: #1f1f1f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}

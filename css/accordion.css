@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.faq-list {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto 120px;
+}
+
+.faq-list .item {
+  border-top: solid 1px #1f1f1f;
+}
+
+.faq-list .item:last-child {
+  border-bottom: solid 1px #1f1f1f;
+}
+
+.faq-list .item dt {
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 40px 0;
+  position: relative;
+}
+
+
+.faq-list .item dt::before,
+.faq-list .item dt::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: #1f1f1f;
+  /* ↑ 通常は黒 */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 横線 */
+.faq-list .item dt::before {
+  width: 15px;
+  height: 1px;
+  top: 55px;
+}
+
+/* 縦線 */
+.faq-list .item dt::after {
+  width: 1px;
+  height: 15px;
+  top: 48px;
+  right: 6px;
+}
+
+/* 開いたとき */
+.faq-list .item dt.active::after {
+  transform: rotate(90deg);
+  /* ↑縦線を横に回転させる */
+}
+
+/* 開いたときの色変更 */
+.faq-list .item dt.active::before,
+.faq-list .item dt.active::after {
+  background-color: #e60033;
+  /* ↑ 赤に変化 */
+}
+
+.faq-list .item dt .question {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 100px;
+}
+
+.faq-list .item dd {
+  display: flex;
+  font-size: 15px;
+  padding-bottom: 40px;
+  line-height: 1.8;
+}
+
+.faq-list .item dd a {
+  text-decoration: underline;
+}
+
+.faq-list .item dd .answer {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 1px #1f1f1f;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 100px;
+}
+
+/*-------------------------------------------モバイル ------------------------------------------*/
+@media screen and (max-width: 767px) {
+  h1 {
+    padding: 0 40px;
+  }
+
+  .faq-list {
+    margin: 0 auto 60px;
+  }
+
+  .faq-list .item {
+    padding-right: 20px;
+  }
+
+  .faq-list .item dt {
+    padding: 30px 0;
+  }
+
+  .faq-list .item dt::before {
+    top: 45px;
+    right: -20px;
+  }
+
+  .faq-list .item dt::after {
+    top: 38px;
+    right: -14px;
+  }
+
+  .faq-list .item dt .question {
+    margin-right: 20px;
+  }
+
+  .faq-list .item dd {
+    padding-bottom: 30px;
+  }
+
+  .faq-list .item dd .answer {
+    margin-right: 20px;
+  }
+}

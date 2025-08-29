@@ -1,0 +1,238 @@
+<!-- header.php ここから -->
+<!DOCTYPE html>
+
+<head>
+  <title>samurai university</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="samurai university" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
+  <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
+</head>
+
+<body>
+  <div class="super_container">
+    <!-- ヘッダーここから -->
+    <header class="header">
+      <div class="header_container">
+        <div class="">
+          <nav class="navbar navbar-expand-lg">
+            <div class="logo_container">
+              <div class="logo_text">
+                <a href="index.html">
+                  <img src="images/logo_big.png" />
+                  <span>Samurai University</span>
+                </a>
+              </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars toggle-menu" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav flex-row ml-md-auto d-md-flex main_nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">
+                    NEWS
+                    <p>ニュース</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html">
+                    EVENT
+                    <p>イベント</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="courses.html">
+                    COURSES
+                    <p>コース</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about_us.html">
+                    ABOUT US
+                    <p>侍大学について</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- ヘッダー ここまで -->
+    <!-- header.php ここまで -->
+    <!-- Home -->
+
+    <div class="home">
+      <div class="breadcrumbs_container">
+        <div class="image_header">
+          <div class="header_info">
+            <div>Courses</div>
+            <div>コース</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses -->
+
+    <div class="courses">
+      <div class="footer_row">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="title">コース</p>
+            <div class="courses_container">
+              <div class="row courses_row">
+                <!-- Course -->
+                <div class="col-lg-4 course_col">
+                  <div class="course">
+                    <div class="course_image">
+                      <img src="images/PIC6-3.jpg" alt="" />
+                    </div>
+                    <div class="course_body">
+                      <h3 class="course_title">
+                        <a href="courses_detail.html">教育学部</a>
+                      </h3>
+                      <div class="course_text">
+                        <p>
+                          広い視野と総合力を持つ世界に通用する、教育者・指導者を育成
+                        </p>
+                      </div>
+                    </div>
+                    <div class="course_footer">
+                      <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="course_price ml-auto">詳細を見る</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 course_col">
+                  <div class="course">
+                    <div class="course_image">
+                      <img src="images/pic6-1.jpg" alt="" />
+                    </div>
+                    <div class="course_body">
+                      <h3 class="course_title">
+                        <a href="courses_detail.html">理工学部</a>
+                      </h3>
+                      <div class="course_text">
+                        <p>
+                          未知なる科学技術の扉を開く。
+                          「次世代」を見据えた専門教育
+                        </p>
+                      </div>
+                    </div>
+                    <div class="course_footer">
+                      <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="course_price ml-auto">詳細を見る</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 course_col">
+                  <div class="course">
+                    <div class="course_image">
+                      <img src="images/PIC6-4.jpg" alt="" />
+                    </div>
+                    <div class="course_body">
+                      <h3 class="course_title">
+                        <a href="courses_detail.html">法学部</a>
+                      </h3>
+                      <div class="course_text">
+                        <p>複雑な社会現象を考察する、法律学科と政治学科</p>
+                      </div>
+                    </div>
+                    <div class="course_footer">
+                      <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="course_price ml-auto">詳細を見る</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer.php ここから -->
+    <footer class="footer">
+      <div class="row footer_row">
+        <div class="col">
+          <div class="footer_content">
+            <div class="row">
+              <div class="col-lg-4 footer_col">
+                <div class="footer_section footer_about">
+                  <div class="footer_logo_container">
+                    <img src="images/logo_big.png" alt="" />
+                    <a href="">
+                      <div class="footer_logo_text">Samurai University</div>
+                    </a>
+                  </div>
+                  <div class="footer_contact_info">
+                    <div>〒150-0043</div>
+                    <div>東京都渋谷区道玄坂2丁目11-1 Gスクエア渋谷道玄坂4F</div>
+                    <ul>
+                      <li><span>TEL: </span>03-2222-11</li>
+                      <li><span>MAIL: </span>: sample@sejuku.net</li>
+                    </ul>
+                  </div>
+                  <div class="footer_social">
+                    <ul>
+                      <li>
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 footer_col">
+                <div class="footer_section footer_links">
+                  <div class="footer_links_container">
+                    <ul>
+                      <li><a href="news.html">ニュース</a></li>
+                      <li><a href="events.html">イベント</a></li>
+                      <li><a href="courses.html">コース</a></li>
+                      <li><a href="about_us.html">侍大学について</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 footer_col clearfix">
+                ※ここにTwitterのタイムラインを埋め込みます
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright_row">
+        <div class="col">
+          <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+            <div class="cr_text">
+              Copyright &copy; Samurai University All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--jQuery-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="styles/bootstrap4/popper.js"></script>
+  <script src="styles/bootstrap4/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(".carousel").carousel();
+  </script>
+
+</body>
+
+</html>
+<!-- footer.php ここまで -->

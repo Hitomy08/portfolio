@@ -1,0 +1,117 @@
+.c-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #111;
+  text-decoration: none;
+  background-color: #eac300;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px rgb(0 0 0 / 15%);
+}
+
+.c-btn:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.c-btn--submit {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.c-message {
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+.c-message--create,
+.c-message--delete {
+  color: #28a745;
+}
+
+.c-edit-icon,
+.c-delete-icon {
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* book_list.php =======================*/
+/* 並び替えボタン */
+.c-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1em 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.c-controls {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.c-sort-icon {
+  height: 2rem;
+  width: auto;
+  vertical-align: top;
+}
+
+.c-sort-icon:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .c-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c-message {
+    font-size: .9em;
+    padding: 10px;
+  }
+
+  .c-controls {
+    /* flex-direction: column;
+    align-items: stretch; */
+    margin-bottom: 1.5rem;
+  }
+
+  .c-search-form__input {
+    width: 100%;
+  }
+
+  .c-btn {
+    width: 70%;
+    text-align: center;
+  }
+
+}
+
+/* book_list.php =======================*/
+/* 検索欄 */
+.c-search-form {
+  margin-left: 1rem;
+}
+
+.c-search-form__input {
+  box-sizing: border-box;
+  max-width: 300px;
+  height: 1.75rem;
+  padding: 0.25rem 0.5rem;
+  background: #eee;
+  border: none;
+  outline: 0;
+}
+
+/* book_list.php =======================*/
+/* 商品一覧テーブル（スマホで表が潰れない対策） */
+.c-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

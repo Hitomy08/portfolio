@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="グループ_49" data-name="グループ 49" transform="translate(-1230 -2447)">
+    <circle id="楕円形_29" data-name="楕円形 29" cx="12.5" cy="12.5" r="12.5" transform="translate(1230 2447)" fill="#fff"/>
+    <path id="楕円形_29_-_アウトライン" data-name="楕円形 29 - アウトライン" d="M12.5,1A11.5,11.5,0,0,0,4.368,20.632,11.5,11.5,0,0,0,20.632,4.368,11.425,11.425,0,0,0,12.5,1m0-1A12.5,12.5,0,1,1,0,12.5,12.5,12.5,0,0,1,12.5,0Z" transform="translate(1230 2447)" fill="#1f1f1f"/>
+    <path id="線_102" data-name="線 102" d="M15,.5H0v-1H15Z" transform="translate(1237.5 2454.5) rotate(45)" fill="#1f1f1f"/>
+    <path id="線_103" data-name="線 103" d="M15,.5H0v-1H15Z" transform="translate(1237.5 2465.106) rotate(-45)" fill="#1f1f1f"/>
+  </g>
+</svg>

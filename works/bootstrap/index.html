@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="SAMPLE">
+  <title>SAMPLE教材</title>
+  <!-- ************************************************ bootstrap.min.cssの読み込み -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- ************************************************ bootstrap.bundle.min.jsの読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+    </script>
+
+  <!-- ************************************************ Google Font読み込み -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+
+  <!-- ************************************************今回作成する styles.cssの読み込み -->
+  <link href="stylesheet/style.css" rel="stylesheet">
+  <!-- ************************************************  -->
+</head>
+
+<body>
+  <main>
+    <!-- ************************************************ ナビゲーションバー開始 -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand my_navbar_brand">
+          <img class="img-fluid navbar_brand_logo" src="img/site_logo.png" alt="サイトアイコン"><span>MY KITCHEN</span>
+        </a>
+        <div class="navbar-toggler hamburger_menu" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          　aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <input type="checkbox" id="hamburger_btn_check">
+          <label for="hamburger_btn_check" class="hamburger_btn">
+            <img class="btn_open" src="img/button_open.png" alt="ナビゲーションバーのボタン">
+            <img class="btn_close" src="img/button_close.png" alt="ナビゲーションバーのボタン">
+          </label>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" aria-current="page" href="#">HOME</a>
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" href="#about">ABOUT US</a>
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" href="#gallery">GALLERY</a>
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" href="#menu">MENU</a>
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" href="#review">CUSTOMER REVIEWS</a>
+            </li>
+
+            <li class="nav-item px-2">
+              <a class="nav-link my_nav_link my-2" href="#access">ACCESS</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ************************************************ ナビゲーションバー終了 -->
+
+    <!-- ************************************************ カルーセル開始 -->
+    <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slider-1.jpg" alt="MY KITCHEN-1">
+          <div class="carousel-caption">
+            <h1 class="my_carousel_caption">
+              Welcome to<br>
+              MY KITCHEN
+            </h1>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/slider-2.jpg" alt="サンプル画像">
+          <div class="carousel-caption">
+            <h1 class="my_carousel_caption">
+              The fabulous combination of&nbsp;wine&nbsp;and&nbsp;food
+            </h1>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/slider-3.jpg" alt="サンプル画像">
+          <div class="carousel-caption">
+            <h1 class="my_carousel_caption">Get the Italian taste<br>
+              at the MY&nbsp;KITCHEN
+            </h1>
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+    <!-- ************************************************ カルーセル終了 -->
+
+    <!-- ************************************************ アバウトセクション開始 -->
+    <section class="about_us_bg" id="about">
+      <div class="container py-5 mb-5">
+        <div class="row">
+          <div class="col-lg-6 text-left">
+            <div class="py-5">
+              <h2 class="section_title about mb-5">
+                ABOUT US
+              </h2>
+              <p class="mb-2">
+                本場イタリアンの味を追求し、厳選した国産食材を使用。<br>
+                オーガニック野菜、熟成させた自家製プロシュート、<br>
+                毎朝仕込むピザ生地など、あらゆる食材へのこだわり。<br>
+              </p>
+              <p class="mb-2">
+                料理に合うワインもイタリア産のものから国産のものまでラインナップ豊富。<br>
+              </p>
+              <p class="mb-2">
+                イタリアのワインの名産地「ピエモンテ州」「ヴェネト州」で生産された<br>
+                ワインを取り揃え、上品な味わいをお愉しみいただけます。<br>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/img-about-us.png" class="img-fluid" alt="pizza">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ************************************************ アバウトセクション終了 -->
+
+    <!-- ************************************************ ギャラリーセクション開始 -->
+    <section id="gallery">
+      <div class="container mb-5">
+        <h2 class="mb-3 section_title gallery text-center">GALLERY</h2>
+        <p class="text-center mb-5">
+          上品な大人の空間で素敵なひと時を
+        </p>
+        <div class="row">
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-1.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-2.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-3.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-4.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-5.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-6.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-7.jpg" alt="サンプル画像">
+          </div>
+
+          <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+            <img class="img-fluid" src="img/gallery-8.jpg" alt="サンプル画像">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ************************************************ ギャラリーセクション終了 -->
+
+    <!-- ************************************************ メニューセクション -->
+    <section id="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section_title menu text-center mb-5">MENU</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/margherita.png" class="img-fluid" alt="マルゲリータ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">マルゲリータ</h4>
+                <p class="my-auto">彩り鮮やかなトマトチーズバジルに、食欲がそそられるピザ。石窯で直火で焼き上げ、サクサクで香ばしい、フチとモチモチの生地の食感が楽しめる、一皿。</p>
+                <p class="menu_price">¥1,600</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/steak.png" class="img-fluid" alt="フィオレンティーナステーキ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">フィオレンティーナステーキ</h4>
+                <p class="my-auto">生後12か月以下の牛の肩ロースを分厚く切り、味付けはシンプルに塩・胡椒で、炭火でカリッと焼き上げたステーキ。香ばしく食べ応え十分なひと皿。</p>
+                <p class="menu_price">¥2,200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/pescatore.png" class="img-fluid" alt="ペスカトーレ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">ペスカトーレ</h4>
+                <p class="my-auto">貝・海老・魚の魚介をたっぷりと使ったトマトソースのパスタ。にんにく、白ワインをベースに、トマトの酸味と魚介の旨みでコクのあるスープが味わえるひと皿。</p>
+                <p class="menu_price">¥1,400</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/carbonara.png" class="img-fluid" alt="カルボナーラ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">カルボナーラ</h4>
+                <p class="my-auto">豚肉の塩漬けのパンチェッタ、鶏卵、黒胡椒、粉チーズを使用したパスタ料理。濃厚な卵とチーズにパンチェッタの塩味の利いたひと皿。</p>
+                <p class="menu_price">¥1,400</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/amatriciana.png" class="img-fluid" alt="アマトリチャーナ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">アマトリチャーナ</h4>
+                <p class="my-auto">豚肉の塩漬けのパンチェッタと、玉ねぎとトマトを使用したパスタ料理。パンチェッタの塩味とトマトの酸味のバランスが絶妙なひと皿。</p>
+                <p class="menu_price">¥1,400</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/acqua-pazza.png" class="img-fluid" alt="アクアパッツァ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">アクアパッツァ</h4>
+                <p class="my-auto">タイやアサリなどの魚介類に、トマトやオリーブオイル、にんにくなどを煮込んだパスタ料理。白ワインのソースに溶け込んだ魚介類の旨みがいっぱいのひと皿。</p>
+                <p class="menu_price">¥2,000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/bagna-cauda.png" class="img-fluid" alt="バーニャカウダ">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">バーニャカウダ</h4>
+                <p class="my-auto">旬の野菜が満載の野菜料理。チーズ、オリーブオイル、バルサミコ酢をベースにした3種の自家製ソースでお好みに合わせて召し上がれるひと皿。</p>
+                <p class="menu_price">¥1,000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-0 mb-4">
+              <div class="col-12 col-lg-5 text-center">
+                <img src="img/gelato.png" class="img-fluid" alt="ジェラート">
+              </div>
+              <div class="col-12 col-lg-7 p-4">
+                <h4 class="mb-0 menu_title">ジェラート</h4>
+                <p class="my-auto">濃厚な牛乳をベースにしたものから、果肉と果汁が満載のフルーツをベースにしたものまで取り揃えたイタリアのアイス。冷たくて甘いひと皿。</p>
+                <p class="menu_price">¥800</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ************************************************ メニューセクション終了 -->
+
+    <!-- ************************************************ レビューセクション開始 -->
+    <section id="review">
+      <div class="review_wrapper">
+        <div class="container py-5 mb-5">
+          <div class="text-center mb-5">
+            <h2 class="section_title review text-center text-white">CUSTOMER REVIEWS</h2>
+          </div>
+          <div class="row pb-5 justify-content-center">
+            <div class="col-12 col-lg-5 mt-3">
+              <div class="bg-white h_420">
+                <div class="p-4">
+                  <div class="d-flex align-items-center">
+                    <img src="img/customer-woman.png" class="reviewer_img" alt="サンプル画像">
+                    <div>
+                      <p class="my-0">40代/女性</p>
+                      <p class="my-0">夫婦でご来店</p>
+                    </div>
+                  </div>
+                  <div class="my-3">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                  </div>
+                  <h5>親切で丁寧なご提案</h5>
+                  <p>
+                    ディナーに来た際にワインを選ぶのに悩んでいたら、注文する料理に合ったオススメのワインを教えてもらえて、ワインのテイスティングまでさせてもらえたのでとても嬉しかったです。次はワインを選んでからオススメの料理を聞いてみようと思います。
+                  </p>
+                  <button type="button" class="btn btn-warning shadow fix_bottom">詳細</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 mt-3">
+              <div class="bg-white h_420">
+                <div class="p-4">
+                  <div class="d-flex align-items-center">
+                    <img src="img/customer-man.png" class="reviewer_img" alt="サンプル画像">
+                    <div>
+                      <p class="my-0">30代/男性</p>
+                      <p class="my-0">パートナーとご来店</p>
+                    </div>
+                  </div>
+                  <div class="my-3">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-point.png" class="star_img" alt="star">
+                    <img src="img/star-no-point.png" class="star_img" alt="no-star">
+                  </div>
+                  <h5>素敵な時間と思い出</h5>
+                  <p>
+                    パートナーとのアニバーサリーにこちらのお店を選んで正解でした。店内の雰囲気も落ち着いていて上品で、事前に予約した際に打ち合わせしたサプライズが成功したあとに、さらにお店からもサプライズをいただけて、とても素敵な思い出になりました。
+                  </p>
+                  <button type="button" class="btn btn-warning shadow fix_bottom">詳細</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ************************************************ レビューセクション終了 -->
+
+    <!-- ************************************************ アクセスセクション開始 -->
+    <section id="access">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section_title text-center access mb-5">ACCESS</h2>
+            <p>JR山手線　渋谷駅より徒歩3分、店舗に隣接した駐車場があります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-5 px-2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12967.114087343349!2d139.687349334065!3d35.657827993593834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1.1!3m3!1m2!1s0x6018f5209bb80c49%3A0x7abbc1a9d7d575eb!2z5qCq5byP5Lya56S-5L6N!5e0!3m2!1sja!2sjp!4v1623882550231!5m2!1sja!2sjp"
+          class="w-100" style="height: 50vh;" loading="lazy"></iframe>
+      </div>
+    </section>
+    <!-- ************************************************ アクセスセクション終了 -->
+
+
+    <!-- ************************************************ フッター開始 -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 position-relative">
+            <div class="row pt-5">
+              <div class="col-lg-2 text-center my-3">
+                <img class="img-fluid footer_brand_logo" src="img/site_logo.png" alt="サンプル画像">
+              </div>
+              <div class="col-lg-10 align-self-center my-3">
+                <h2 class="m-0 footer_text">MY RESTAURANT</h2>
+              </div>
+            </div>
+
+            <div class="restaurant_info py-3">
+              <div class="d-flex mb-3">
+                <img src="img/icon-Marker.png" alt="marker">
+                <p class="p-0 m-0">東京都渋谷区道玄坂2丁目11-1Gスクエア渋谷道玄坂4F</p>
+              </div>
+              <div class="d-flex mb-3">
+                <img src="img/icon-Clock.png" alt="clock">
+                <p class="p-0 m-0">12:00-22:00&nbsp;&nbsp;(定休日：火曜日、水曜日)</p>
+              </div>
+              <div class="d-flex mb-3">
+                <img src="img/icon-Phone.png" alt="phone">
+                <p class="p-0 m-0">03-1234-5678</p>
+              </div>
+              <div class="d-flex mb-3">
+                <img src="img/icon-Mail.png" alt="mail">
+                <p class="p-0 m-0">test@example.com</p>
+              </div>
+            </div>
+
+            <div class="copy_right align-items-center">
+              <p>
+                ©MY KITCHEN, All Rights Reserved.
+              </p>
+              <img src="img/icon-facebook.png" class="sns_img" alt="facebook">
+              <img src="img/icon-twitter.png" class="sns_img" alt="twitter">
+            </div>
+          </div>
+
+          <!-- 右側背景画像 -->
+          <div class="col-12 col-lg-6 d-none d-lg-block">
+            <img src="img/background-footer.jpg" alt="背景画像">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ************************************************ フッター終了 -->
+
+  </main>
+</body>
+
+</html>
