@@ -27,3 +27,9 @@ wp/wp-content/plugins/ultimate-addons-for-gutenberg/dist/
 # PHP Composer（将来用）
 # ==========================
 /vendor/
+
+
+# ==========================
+# OTHERS
+# ==========================
+/_init_files_backup/
