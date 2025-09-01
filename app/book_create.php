@@ -60,67 +60,42 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
+<?php include __DIR__ . '/header.php'; ?>
+<main class="l-main">
+  <article class="l-article p-article--narrow">
+    <h1>商品登録</h1>
+    <div class="p-book-create__back">
+      <a href="book_list.php" class="c-btn">&lt; 戻る</a>
+    </div>
+    <form action="book_create.php" method="post" class="p-book-create__form">
+      <div>
+        <label for="book_code">品番</label>
+        <input type="text" name="book_code" id="book_code" min="0" required>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD・データ編集機能</title>
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/component.css">
-  <link rel="stylesheet" href="css/project.css">
-  <!--Google Fontsの読み込み-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-</head>
+        <label for="book_name">商品名</label>
+        <input type="text" name="book_name" id="book_name" required>
 
+        <label for="price">単価</label>
+        <input type="number" name="price" id="price" min="0" required>
 
-<body>
-  <!--  
-  <header class="l-header">
-    <nav class="l-header__nav">
-      <a href="index.php">商品管理アプリ</a>
-    </nav>
-  </header>
-  -->
-  <main class="l-main">
-    <article class="l-article p-article--narrow">
-      <h1>商品登録</h1>
-      <div class="p-book-create__back">
-        <a href="book_list.php" class="c-btn">&lt; 戻る</a>
+        <label for="stock_quantity">在庫数</label>
+        <input type="number" name="stock_quantity" id="stock_quantity" min="0" required>
+
+        <label for="genre_code">ジャンルコード</label>
+        <select name="genre_code" id="genre_code" required>
+          <option value="" disabled selected>選択してください</option>
+          <?php
+          // 配列の中身をforeach文で順番に取り出し、セレクトボックスの選択肢として出力する
+          foreach ($genre_codes as $genre_code) {
+            echo "<option value='{$genre_code}'>{$genre_code}</option>";
+          }
+          ?>
+        </select>
       </div>
-      <form action="book_create.php" method="post" class="p-book-create__form">
-        <div>
-          <label for="book_code">品番</label>
-          <input type="text" name="book_code" id="book_code" min="0" required>
-
-          <label for="book_name">商品名</label>
-          <input type="text" name="book_name" id="book_name" required>
-
-          <label for="price">単価</label>
-          <input type="number" name="price" id="price" min="0" required>
-
-          <label for="stock_quantity">在庫数</label>
-          <input type="number" name="stock_quantity" id="stock_quantity" min="0" required>
-
-          <label for="genre_code">ジャンルコード</label>
-          <select name="genre_code" id="genre_code" required>
-            <option value="" disabled selected>選択してください</option>
-            <?php
-            // 配列の中身をforeach文で順番に取り出し、セレクトボックスの選択肢として出力する
-            foreach ($genre_codes as $genre_code) {
-              echo "<option value='{$genre_code}'>{$genre_code}</option>";
-            }
-            ?>
-          </select>
-        </div>
-        <button type="submit" class="c-btn c-btn--submit" name="submit" value="submit">登録</button>
-      </form>
-    </article>
-  </main>
+      <button type="submit" class="c-btn c-btn--submit" name="submit" value="submit">登録</button>
+    </form>
+  </article>
+</main>
 
 </body>
 
