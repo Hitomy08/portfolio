@@ -1,35 +1,41 @@
-# ==========================
-# OS / Editor
-# ==========================
+# まず wp 以下を全部無視
+wp/*
+
+# ただし wp-content は見る
+!wp/wp-content/
+
+# wp-content も基本は無視
+wp/wp-content/*
+
+# 例外：自作テーマだけ管理対象に
+!wp/wp-content/themes/
+wp/wp-content/themes/*
+!wp/wp-content/themes/samurai_university/
+!wp/wp-content/themes/samurai_university/**
+
+# テーマのビルド成果物は除外
+wp/wp-content/themes/samurai_university/dist/
+
+# アップロードや一般プラグインは引き続き無視
+wp/wp-content/uploads/
+wp/wp-content/plugins/
+
+# 依存物・生成物
+node_modules/
+vendor/
+dist/
+build/
+
+# 秘密情報や環境差分
+.env*
+wp/wp-config.php
+
+# OS/エディタごみ
 .DS_Store
 Thumbs.db
-.vscode/
 
-# ==========================
-# Build / Logs
-# ==========================
-node_modules/
-dist/
+# ログ類
 *.log
 
-# ==========================
-# WordPress / PHP
-# ==========================
-wp/wp-config.php
-wp/wp-content/uploads/
-wp/wp-content/cache/
-wp/wp-content/debug.log
-wp/wp-content/plugins/ultimate-addons-for-gutenberg/dist/
-
-.env
-
-# ==========================
-# PHP Composer（将来用）
-# ==========================
-/vendor/
-
-
-# ==========================
-# OTHERS
-# ==========================
+# その他
 /_init_files_backup/
