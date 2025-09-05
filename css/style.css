@@ -473,7 +473,7 @@ button:focus-visible {
   line-height: 2.2;
   letter-spacing: .13em;
   margin: 0 0 40px;
-  max-width: 45rem;
+  max-width: 46rem;
 }
 
 /* 箇条書き（行型） */
@@ -510,7 +510,7 @@ button:focus-visible {
   margin: 0;
   padding: 0 16px 0 12px;
   overflow-wrap: break-word;
-  max-width: 45rem;
+  max-width: 46rem;
 }
 
 /* 点リスト（黒ポチ風） */
